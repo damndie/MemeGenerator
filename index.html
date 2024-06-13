@@ -1,15 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Generator</title>
+    <title>Ultimate Meme Generator</title>
+    <script src="https://kit.fontawesome.com/1919900fcd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <header>
-        
+
+<body class="main-layout">
+    <div class="main-screen" onclick="toggleMenu()"></div>
+
+    <header class="main-header full main-layout">
+        <div class="header-container flex align-center space-between">
+            <div class="logo"><img src="imgs/LOGO.png"></div>
+            <nav class="main-nav">
+                <ul class="main-nav-list flex clean-list" onclick="toggleMenu()">
+                    <li><a href="#" class="gallery-nav active" onclick="switchToGallery()">Gallery</a></li>
+                    <li><a href="#" class="saved-nav" onclick="switchToSaved()">Saved Memes</a></li>
+                    <li><a href="#" class="about-nav" onclick="switchToAbout()">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
+
+    <section class="main-gallery">
+        <section class="gallery-header flex space-between">
+            <div>
+                <input type="search" placeholder="Search..." class="search-field" list="keywordsList"
+                    oninput="onSetFilterBy({ keywords: this.value })" />
+                <datalist id="keywordsList">
+                    <option value="Famous"></option>
+                    <option value="Pets"></option>
+                    <option value="Movie"></option>
+                    <option value="Kids"></option>
+                    <option value="Funny"></option>
+                    <option value="Scary"></option>
+                </datalist>
+            </div>
+            <button class="flex-btn" title="Random meme" onclick="onRandomMeme()">I'm Flexible</button>
+        </section>
+
+        <section class="gallery-container"></section>
+
+    </section>
+
+    <section class="main-editor" hidden>
+        <h2>Saved Memes</h2>
+
+        <section class="saved-container gallery-container grid"></section>
+
+    </section>
+
+    <div class="main-editor">
+        <h2>MEME Editor</h2>
+        <div class="editor-layout grid">
+
+            <div class="canvas-container">
+                <canvas width="500" height="500"></canvas>
+            </div>
+
+            <section class="controls-container flex align-center columns">
+                <div class="input-container align-center columns space-between">
+                    <input class="text-imput" type="text" oninput="onSetLineTxt()">
+                </div>
+            </section>
+
+            <section class="edit-btn-container">
+                <div class="switch-text" onclick="onSwitchLine()"></div>
+                <div class="add-text" onclick="onAddLine()"></div>
+                <div class="delete-text" onclick="onDeleteLine()"></div>
+            </section>
+
+            <section class="style-container grid">
+                <div class="grow-btn" onclick="onIncreaseLineSize()"></div>
+                <div class="shrink-btn" onclick="onDecreaseLineSize()"></div>
+                <div class="align-text-left" onclick="onAlignLeft()"></div>
+                <div class="align-text-center" onclick="onAlignCenter()"></div>
+                <div class="align-text-right" onclick="onAlignRight()"></div>
+            </section>
+
+            <select class="change-font" name="change-font" onchange="onChangeFont(this.value)">
+                <option value="Inpact"></option>
+            </select>
+
+        </div>
+    </div>
+
+
 </body>
+
 </html>
