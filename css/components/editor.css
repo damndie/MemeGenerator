@@ -15,7 +15,12 @@
 .controls-container {
     grid-column: 4;
     padding: 50px;
-    background-color: rgb(54, 50, 50)
+    background-color: rgb(54, 50, 50);
+    border-radius: 10px;
+}
+
+.share-container{
+    padding: 20px;
 }
 
 .edit-btn-container {

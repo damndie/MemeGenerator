@@ -25,7 +25,7 @@
         </div>
     </header>
 
-    <section class="main-gallery" hidden>
+    <section class="main-gallery" >
         <section class="gallery-header flex space-between">
             <div>
                 <input type="search" placeholder="Search..." class="search-field" list="keywordsList"
@@ -46,14 +46,14 @@
 
     </section>
 
-    <section class="main-editor" hidden>
+    <section class="main-editor hidden">
         <h2>Saved Memes</h2>
 
         <section class="saved-container gallery-container grid"></section>
 
     </section>
 
-    <div id="main-editor" class="main-editor">
+    <div id="main-editor" class="main-editor hidden" >
         <h2>MEME Editor</h2>
         <div class="editor-layout grid  ">
 
@@ -66,17 +66,17 @@
                         placeholder="ADD TEXT">
                 </div>
                 <div class="edit-btn-container ">
-                    <div class="switch-text" onclick="onSwitchLine()"><i>d</i></div>
-                    <div class="add-text" onclick="onAddLine()"><i>d</i></div>
-                    <div class="delete-text" onclick="onDeleteLine()"><i>d</i></div>
+                    <div class="switch-text" onclick="onSwitchLine()"><i class="fa-solid fa-repeat"></i></div>
+                    <div class="add-text" onclick="onAddLine()"><i class="fa-solid fa-plus"></i></div>
+                    <div class="delete-text" onclick="onDeleteLine()"><i class="fa-solid fa-trash"></i></div>
                 </div>
 
                 <div class="style-container grid ">
-                    <div class="grow" onclick="onIncreaseLineSize()"><i>d</i></div>
-                    <div class="shrink" onclick="onDecreaseLineSize()"><i>d</i></div>
-                    <div class="align-left" onclick="onAlignLeft()"><i>d</i></div>
-                    <div class="align-text-center" onclick="onAlignCenter()"><i>d</i></div>
-                    <div class="align-right" onclick="onAlignRight()"><i>d</i></div>
+                    <div class="grow" onclick="onIncreaseLineSize()"><i><span>A<sup>+</sup></span></i></div>
+                    <div class="shrink" onclick="onDecreaseLineSize()"><i><span>A<sup>-</sup></span></i></div>
+                    <div class="align-left" onclick="onAlignLeft()"><i class="fa-solid fa-align-left"></i></div>
+                    <div class="align-text-center" onclick="onAlignCenter()"><i class="fa-solid fa-align-center"></i></div>
+                    <div class="align-right" onclick="onAlignRight()"><i class="fa-solid fa-align-right"></i></div>
 
                     <select class="btn change-font" name="change-font" onchange="onChangeFont(this.value)">
                         <option value="Impact">Impact</option>
