@@ -55,7 +55,7 @@
 
     <div id="main-editor" class="main-editor hidden" >
         <h2>MEME Editor</h2>
-        <div class="editor-layout grid  ">
+        <div class="editor-layout grid">
 
             <div class="canvas-container">
                 <canvas height="500px" width="500px"></canvas>
@@ -72,8 +72,8 @@
                 </div>
 
                 <div class="style-container grid ">
-                    <div class="grow" onclick="onIncreaseLineSize()"><i><span>A<sup>+</sup></span></i></div>
-                    <div class="shrink" onclick="onDecreaseLineSize()"><i><span>A<sup>-</sup></span></i></div>
+                    <div class="grow" onclick="onIncreaseLineSize()"><i><span>A+</span></i></div>
+                    <div class="shrink" onclick="onDecreaseLineSize()"><i><span>A-</span></i></div>
                     <div class="align-left" onclick="onAlignLeft()"><i class="fa-solid fa-align-left"></i></div>
                     <div class="align-text-center" onclick="onAlignCenter()"><i class="fa-solid fa-align-center"></i></div>
                     <div class="align-right" onclick="onAlignRight()"><i class="fa-solid fa-align-right"></i></div>
@@ -84,17 +84,19 @@
                         <option value="Times New Roman">Times New Roman</option>
                     </select>
 
-                    <div class="btn save" onclick="onSaveMeme()"></div>
+                    <div class="btn save" onclick="onSaveMeme()"><i class="fa-regular fa-floppy-disk"></i></div>
 
                     <label for="color-picker" class="color-picker">
-                        <input oninput="onChangeLineColor(this.value)" type="color" name="color-picker"
+                        <input oninput="onChangeLineColor(this.value)"  hidden type="color" name="color-picker"
                             id="color-picker">
+                            <i class="fa-solid fa-fill"></i>
                     </label>
+
                 </div>
 
                 <div class="share-container ">
                     <button class="btn share" onclick="onUploadImg()">Upload to Facebook</button>
-                    <button class="btn download"><a href="#" class="btn download " onclick="onDownloadMeme(this)"
+                    <button class="btn download"><a href="#" class="btn download" onclick="onDownloadMeme(this)"
                             download="my-img">Download MEME</a></button>
                 </div>
             </div>
@@ -103,7 +105,13 @@
     </div>
 
 
-
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/upload.js"></script>
+    <script src="js/services/download.js"></script>
+    <script src="js/services/utils.js"></script>
+    <script src="js/services/meme.service.js"></script>
+    <script src="js/gallery.controller.js"></script>
+    <script src="js/meme.controller.js"></script>
 </body>
 
 </html>

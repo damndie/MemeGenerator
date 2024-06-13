@@ -19,6 +19,12 @@
     color: var(--primary-base);
 }
 
+.save {
+    background-color: lightskyblue;
+    color: var(--primary-base);
+}
+
+
 
 .text-input{
     border-radius: 20px;
@@ -48,9 +54,6 @@ i:active {
     background-color: var(--btn-active);
     transform: scale(1);
 }
-
-
-
 
 
 

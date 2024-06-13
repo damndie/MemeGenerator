@@ -15,6 +15,7 @@
 .controls-container {
     grid-column: 4;
     padding: 50px;
+    margin-inline-end: auto;
     background-color: rgb(54, 50, 50);
     border-radius: 10px;
 }
