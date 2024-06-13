@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+.style-container {
+    grid-template-areas:
+        "a b c d e"
+        "f f f g h";
+    background-color: rgb(98, 107, 114);
+    padding: 1em;
+    gap: 1em;
+    border-radius: 1em;
+}
+
+.controls-container {
+    grid-column: 4;
+    padding: 50px;
+    background-color: rgb(54, 50, 50)
+}
+
+.edit-btn-container {
+    display: flex;
+    margin: 1em;
+    gap: 1em;
+}
+
+.grow {
+    grid-area: a;
+}
+
+.shrink {
+    grid-area: b;
+}
+
+.align-left {
+    grid-area: c;
+}
+
+.align-text-center {
+    grid-area: d;
+}
+
+.align-right {
+    grid-area: e;
+}
+
+.change-font {
+    grid-area: f;
+}
+
+.save {
+    grid-area: g;
+}
+
+.color-picker {
+    grid-area: h;
+}
+

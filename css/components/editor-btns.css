@@ -1,0 +1,81 @@
+.edit-btn-container .btn {
+    height: 3.75em;
+    width: 3.75em;
+}
+
+.share-container .btn {
+    border-radius: 0.8em;
+    border: none;
+    height: 4em;
+}
+
+.share {
+    background-color: #4267B2;
+    color: var(--primary-base);
+}
+
+.download {
+    background-color: green;
+    color: var(--primary-base);
+}
+
+.change-font {
+    border-radius: .6em;
+}
+
+i {
+    display: flex;
+    cursor: pointer;
+    font-size: 2em;
+    padding: 0.2em;
+    border-radius: .2em;
+    color: var(--primary-1);
+    background-color: var(--primary-base);
+    scale: 1.1;
+    transition: transform 0.2s;
+}
+
+i:hover {
+    background-color: var(--btn-hover);
+    color: var(--primary-base);
+    transform: scale(1.1);
+}
+
+
+i:active {
+    background-color: var(--btn-active);
+    transform: scale(1);
+}
+
+.search {
+    position: relative;
+}
+
+.search input[type="search"],
+.flexible-btn,
+.upload-img-btn {
+    border: none;
+    border-color: var(--primary-base);
+    background-color: var(--btn-hover);
+    color: var(--primary-base);
+    box-shadow: inset var(--btn-active) 1px 1px 4px 3px;
+    font-family: lato;
+    padding-right: 30px;
+    font-size: 1.2em;
+    padding: 1em;
+    border-radius: 2em;
+    transition: 0.2s;
+}
+
+.search input[type="search"]:hover,
+.upload-img-btn:hover,
+.flexible-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1)
+}
+
+.search input[type="search"]:active,
+.upload-img-btn:active,
+.flexible-btn:active {
+    transform: scale(1)
+}

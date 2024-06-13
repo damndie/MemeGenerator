@@ -25,7 +25,7 @@
         </div>
     </header>
 
-    <section class="main-gallery">
+    <section class="main-gallery" hidden>
         <section class="gallery-header flex space-between">
             <div>
                 <input type="search" placeholder="Search..." class="search-field" list="keywordsList"
@@ -53,40 +53,55 @@
 
     </section>
 
-    <div class="main-editor">
+    <div id="main-editor" class="main-editor">
         <h2>MEME Editor</h2>
-        <div class="editor-layout grid">
+        <div class="editor-layout grid  ">
 
             <div class="canvas-container">
-                <canvas width="500" height="500"></canvas>
+                <canvas height="500px" width="500px"></canvas>
             </div>
-
-            <section class="controls-container flex align-center columns">
-                <div class="input-container align-center columns space-between">
-                    <input class="text-imput" type="text" oninput="onSetLineTxt()">
+            <div class="controls-container flex align-center columns">
+                <div class="inputs-container align-center columns space-around">
+                    <input class="text-input" id="text-input" oninput="onSetLineTxt(this.value)" type="text"
+                        placeholder="ADD TEXT">
                 </div>
-            </section>
+                <div class="edit-btn-container ">
+                    <div class="switch-text" onclick="onSwitchLine()"><i>d</i></div>
+                    <div class="add-text" onclick="onAddLine()"><i>d</i></div>
+                    <div class="delete-text" onclick="onDeleteLine()"><i>d</i></div>
+                </div>
 
-            <section class="edit-btn-container">
-                <div class="switch-text" onclick="onSwitchLine()"></div>
-                <div class="add-text" onclick="onAddLine()"></div>
-                <div class="delete-text" onclick="onDeleteLine()"></div>
-            </section>
+                <div class="style-container grid ">
+                    <div class="grow" onclick="onIncreaseLineSize()"><i>d</i></div>
+                    <div class="shrink" onclick="onDecreaseLineSize()"><i>d</i></div>
+                    <div class="align-left" onclick="onAlignLeft()"><i>d</i></div>
+                    <div class="align-text-center" onclick="onAlignCenter()"><i>d</i></div>
+                    <div class="align-right" onclick="onAlignRight()"><i>d</i></div>
 
-            <section class="style-container grid">
-                <div class="grow-btn" onclick="onIncreaseLineSize()"></div>
-                <div class="shrink-btn" onclick="onDecreaseLineSize()"></div>
-                <div class="align-text-left" onclick="onAlignLeft()"></div>
-                <div class="align-text-center" onclick="onAlignCenter()"></div>
-                <div class="align-text-right" onclick="onAlignRight()"></div>
-            </section>
+                    <select class="btn change-font" name="change-font" onchange="onChangeFont(this.value)">
+                        <option value="Impact">Impact</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
 
-            <select class="change-font" name="change-font" onchange="onChangeFont(this.value)">
-                <option value="Inpact"></option>
-            </select>
+                    <div class="btn save" onclick="onSaveMeme()"></div>
+
+                    <label for="color-picker" class="color-picker">
+                        <input oninput="onChangeLineColor(this.value)" type="color" name="color-picker"
+                            id="color-picker">
+                    </label>
+                </div>
+
+                <div class="share-container ">
+                    <button class="btn share" onclick="onUploadImg()">Upload to Facebook</button>
+                    <button class="btn download"><a href="#" class="btn download " onclick="onDownloadMeme(this)"
+                            download="my-img">Download MEME</a></button>
+                </div>
+            </div>
 
         </div>
     </div>
+
 
 
 </body>
