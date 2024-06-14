@@ -20,7 +20,6 @@
 }
 
 .flex-btn {
-    background-color: rgb(122, 177, 248);
     color: black;
     font-family: lato, Arial, Helvetica, sans-serif;
     cursor: pointer;
@@ -38,6 +37,13 @@
     box-shadow: 4px 1px 20px 1px black;
 }
 
+.upload-img-btn input[type="file"] {
+    padding: 20px;
+    background-color: #202123;
+    border-radius: 20px;
+}
+
+
 img:hover {
     scale: 1.05;
     box-shadow: #000 0px 2px 20px 0px;
@@ -52,23 +58,23 @@ img:hover {
         background-color: #6666ff;
     }
 
-    17% {
+    20% {
         background-color: #0099ff;
     }
 
-    34% {
+    40% {
         background-color: #2ab12a;
     }
 
-    51% {
+    60% {
         background-color: #cd3e86;
     }
 
-    68% {
+    80% {
         background-color: #6666ff;
     }
 
-    85% {
+    90% {
         background-color: indigo;
     }
 

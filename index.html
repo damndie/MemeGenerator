@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="main-layout">
+<body class="main-layout" onload="onInit()">
     <div class="main-screen" onclick="toggleMenu()"></div>
 
     <header class="main-header full main-layout">
@@ -19,13 +19,12 @@
                 <ul class="main-nav-list flex clean-list" onclick="toggleMenu()">
                     <li><a href="#" class="gallery-nav active" onclick="switchToGallery()">Gallery</a></li>
                     <li><a href="#" class="saved-nav" onclick="switchToSaved()">Saved Memes</a></li>
-                    <li><a href="#" class="about-nav" onclick="switchToAbout()">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="main-gallery" >
+    <section class="main-gallery">
         <section class="gallery-header flex space-between">
             <div>
                 <input type="search" placeholder="Search..." class="search-field" list="keywordsList"
@@ -39,21 +38,24 @@
                     <option value="Scary"></option>
                 </datalist>
             </div>
+            <div class="upload-img-btn">
+                <input type="file" class="file" name="image" onchange="onImgInput(event)" accept="image/*" />
+            </div>
             <button class="flex-btn" title="Random meme" onclick="onRandomMeme()">I'm Flexible</button>
         </section>
 
-        <section class="gallery-container"></section>
+        <section class="gallery-container grid"></section>
 
     </section>
 
-    <section class="main-editor hidden">
+    <section class="main-saved hidden">
         <h2>Saved Memes</h2>
 
         <section class="saved-container gallery-container grid"></section>
 
     </section>
 
-    <div id="main-editor" class="main-editor hidden" >
+    <div id="main-editor" class="main-editor hidden">
         <h2>MEME Editor</h2>
         <div class="editor-layout grid">
 
@@ -75,7 +77,8 @@
                     <div class="grow" onclick="onIncreaseLineSize()"><i><span>A+</span></i></div>
                     <div class="shrink" onclick="onDecreaseLineSize()"><i><span>A-</span></i></div>
                     <div class="align-left" onclick="onAlignLeft()"><i class="fa-solid fa-align-left"></i></div>
-                    <div class="align-text-center" onclick="onAlignCenter()"><i class="fa-solid fa-align-center"></i></div>
+                    <div class="align-text-center" onclick="onAlignCenter()"><i class="fa-solid fa-align-center"></i>
+                    </div>
                     <div class="align-right" onclick="onAlignRight()"><i class="fa-solid fa-align-right"></i></div>
 
                     <select class="btn change-font" name="change-font" onchange="onChangeFont(this.value)">
@@ -87,9 +90,9 @@
                     <div class="btn save" onclick="onSaveMeme()"><i class="fa-regular fa-floppy-disk"></i></div>
 
                     <label for="color-picker" class="color-picker">
-                        <input oninput="onChangeLineColor(this.value)"  hidden type="color" name="color-picker"
-                            id="color-picker">
-                            <i class="fa-solid fa-fill"></i>
+                        <input oninput="onChangeLineColor(this.value)" hidden type="color" name="color-picker"
+                            class="color-picker" id="color-picker">
+                        <i class="fa-solid fa-fill"></i>
                     </label>
 
                 </div>
@@ -112,6 +115,7 @@
     <script src="js/services/meme.service.js"></script>
     <script src="js/gallery.controller.js"></script>
     <script src="js/meme.controller.js"></script>
+    <script src="js/save-meme.controller.js"></script>
 </body>
 
 </html>

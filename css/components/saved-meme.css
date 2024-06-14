@@ -1,0 +1,7 @@
+.saved-container {
+    height: 23vh;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    row-gap: 10px;
+    gap: 1em;
+    padding: .5em;
+}
