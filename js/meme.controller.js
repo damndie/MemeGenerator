@@ -106,10 +106,6 @@ function renderMeme() {
     }
 }
 
-function onChangeFont(elFont) {
-    changeFont(elFont)
-    renderMeme()
-}
 
 function onMoveArrows(ev) {
     const line = getSelectedLine()
@@ -126,13 +122,13 @@ function onMoveArrows(ev) {
 function renderText(line) {
     gCtx.beginPath()
     var { size, txt, color, align, x, y, font, stroke } = line
-
+    
     gCtx.fillStyle = color
     gCtx.strokeStyle = stroke
     gCtx.font = size + `px ${font}`
     gCtx.textAlign = align
     gCtx.textBaseline = 'middle'
-
+    
     gCtx.fillText(txt, x, y)
     gCtx.strokeText(txt, x, y)
 }
@@ -141,12 +137,12 @@ function onSelectImg(elImg, imgUrl) {
     document.querySelector(".main-gallery").classList.add('hidden')
     document.querySelector(".main-saved").classList.add('hidden')
     document.querySelector(".main-editor").classList.remove('hidden')
-
+    
     setImg(elImg, imgUrl)
-
+    
     document.querySelector('.text-input').value = ''
     document.querySelector('.text-input').focus()
-
+    
     resizeCanvas()
     renderMeme()
 }
@@ -167,6 +163,11 @@ function onAlignCenter() {
 
 function onAlignRight() {
     alignRight()
+    renderMeme()
+}
+
+function onChangeFont(elFont) {
+    changeFont(elFont)
     renderMeme()
 }
 

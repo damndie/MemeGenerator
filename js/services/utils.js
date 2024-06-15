@@ -14,8 +14,10 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-function toggleMenu(){
-
+function onToggleMenu(){
+    const elMenuBtn = document.querySelector('.btn-menu')
+    elMenuBtn.innerText = elMenuBtn.innerText === '☰' ? 'X' : '☰'
+    document.body.classList.toggle('menu-open')
 }
 
 const TOUCH_EVENTS = ['touchstart', 'touchmove', 'touchend']

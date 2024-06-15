@@ -128,7 +128,6 @@ function getMeme() {
     return gMeme
 }
 
-
 function getImgs() {
     if (!gFilterBy.keywords) return gImgs
 
@@ -187,7 +186,7 @@ function setDataURL(dataURL) {
 }
 
 function getRandomMeme() {
-    const randMemeIdx = getRandomIntInclusive(0, gImgs.length)
+    const randMemeIdx = getRandomIntInclusive(0, gImgs.length - 1)
     gMeme.selectedImgId = randMemeIdx
     return gImgs[randMemeIdx]
 }

@@ -1,0 +1,24 @@
+.btn-menu {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    color: #000;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-size: 2.5em;
+}
+
+.main-screen {
+    opacity: 0;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    pointer-events: none;
+    transition: opacity 0.4s;
+}
+
+body.menu-open .main-screen {
+    opacity: 1;
+    pointer-events: auto;
+}

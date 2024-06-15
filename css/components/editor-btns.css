@@ -19,11 +19,6 @@
     color: var(--primary-base);
 }
 
-.save {
-    background-color: lightskyblue;
-    color: var(--primary-base);
-}
-
 .text-input{
     border-radius: 20px;
     padding: 15px 50px;
@@ -46,7 +41,6 @@ i:hover {
     color: var(--primary-base);
     transform: scale(1.1);
 }
-
 
 i:active {
     background-color: var(--btn-active);

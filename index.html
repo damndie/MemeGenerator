@@ -16,11 +16,13 @@
         <div class="header-container flex align-center space-between">
             <div class="logo"><img src="imgs/LOGO.png"></div>
             <nav class="main-nav">
-                <ul class="main-nav-list flex clean-list" onclick="toggleMenu()">
+                <ul class="clean-list grid flow-column" onclick="toggleMenu()"></ul>
+                <ul class="main-nav-list flex clean-list">
                     <li><a href="#" class="gallery-nav active" onclick="switchToGallery()">Gallery</a></li>
                     <li><a href="#" class="saved-nav" onclick="switchToSaved()">Saved Memes</a></li>
                 </ul>
             </nav>
+            <button class="btn-menu" onclick="onToggleMenu()">☰</button>
         </div>
     </header>
 

@@ -3,11 +3,11 @@
 function renderSavedMemes() {
     const savedMemes = getSavedMemes()
 
-    const savedHTML = savedMemes.map(meme => {
+    const savedHTML = savedMemes.map(savedMeme => {
         return `<img id="makeId()"
-     src="${meme.dataURL}" 
-     alt="${meme.id}" 
-     onclick="onEditSavedMeme('${meme.id}')">`
+     src="${savedMeme.dataURL}" 
+     alt="${savedMeme.id}" 
+     onclick="onEditSavedMeme('${savedMeme.id}')">`
     })
 
     const elSavedMemes = document.querySelector('.saved-container')
@@ -15,14 +15,6 @@ function renderSavedMemes() {
 }
 
 function onEditSavedMeme(memeId) {
-    setSavedMeme(memeId)
-    document.querySelector(".main-editor").classList.remove('hidden')
-    document.querySelector(".main-gallery").classList.add('hidden')
-    document.querySelector(".main-saved").classList.add('hidden')
-    renderMeme()
-}
-
-function onSelectSavedMeme(memeId) {
     setSavedMeme(memeId)
     document.querySelector(".main-editor").classList.remove('hidden')
     document.querySelector(".main-gallery").classList.add('hidden')
