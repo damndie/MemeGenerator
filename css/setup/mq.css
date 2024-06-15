@@ -51,9 +51,21 @@
         display: flex;
         flex-direction: column;
         box-shadow: 0px 0px 6px 1px dimgrey;
-        margin: 0px 30px;
         padding: 15px;
         gap: 15px;
+    }
+
+    .gallery-container{
+        margin-inline-end: auto;
+    }
+
+    .search-field{
+        width: 100%;
+    }
+
+    .logo img {
+        width: 250px;
+        padding: 40px;
     }
 
     .controls-container {
