@@ -62,13 +62,12 @@ function changeFont(elFont) {
 }
 
 function deleteLine() {
-    gMeme.lines.splice(gMeme.selectedLineIdx, 1)
     if (gMeme.selectedLineIdx >= gMeme.lines.length) {
         gMeme.selectedLineIdx = gMeme.lines.length - 1
-    }
-    if (gMeme.selectedLineIdx < 0) {
+    } else if (gMeme.selectedLineIdx < 0) {
         gMeme.selectedLineIdx = 0
     }
+    gMeme.lines.splice(gMeme.selectedLineIdx, 1)
 }
 
 function addLine() {

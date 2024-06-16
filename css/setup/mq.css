@@ -12,7 +12,7 @@
         position: fixed;
         top: 130px;
         right: 0;
-        
+
         height: 100vh;
         width: 100%;
 
@@ -55,11 +55,11 @@
         gap: 15px;
     }
 
-    .gallery-container{
+    .gallery-container {
         margin-inline-end: auto;
     }
 
-    .search-field{
+    .search-field {
         width: 100%;
     }
 
@@ -70,12 +70,11 @@
 
     .controls-container {
         grid-column: 2;
-        margin-inline-start: auto;  
+        margin-inline-start: auto;
     }
-    
 }
 
-@media (min-width: 1000px){
+@media (min-width: 1000px) {
     .btn-menu {
         display: none;
     }

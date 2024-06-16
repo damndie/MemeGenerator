@@ -19,19 +19,6 @@
     border: none;
 }
 
-.flex-btn {
-    color: black;
-    font-family: lato, Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.flex-btn:hover {
-    transform: scale(1.2);
-    box-shadow: 4px 1px 20px 1px black;
-}
-
 .search-field:hover {
     transform: scale(1.2);
     box-shadow: 4px 1px 20px 1px black;
@@ -49,7 +36,20 @@ img:hover {
 }
 
 .flex-btn {
-    animation: rainbow 6s linear alternate infinite;
+    color: black;
+    font-family: lato, Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.flex-btn {
+    animation: rainbow 7s linear alternate infinite;
+}
+
+.flex-btn:hover {
+    transform: scale(1.2);
+    box-shadow: 4px 1px 20px 1px black;
 }
 
 @keyframes rainbow {
@@ -74,10 +74,10 @@ img:hover {
     }
 
     90% {
-        background-color: indigo;
+        background-color: #4b0082;
     }
 
     100% {
-        background-color: purple;
+        background-color: #800080;
     }
 }

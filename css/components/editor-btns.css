@@ -19,7 +19,7 @@
     color: var(--primary-base);
 }
 
-.text-input{
+.text-input {
     border-radius: 20px;
     padding: 15px 50px;
 }
@@ -46,8 +46,3 @@ i:active {
     background-color: var(--btn-active);
     transform: scale(1);
 }
-
-
-
-
-

@@ -74,7 +74,7 @@ function renderMeme() {
     var imgs = onGetImgs()
     const meme = onGetMeme()
     if (meme.dataURL) meme.url = meme.dataURL
-    else meme.url = imgs[meme.selectedImgId.id].url
+    else meme.url = imgs[meme.selectedImgId].url
 
     const img = new Image()
     img.src = meme.url

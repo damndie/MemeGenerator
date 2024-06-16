@@ -20,7 +20,7 @@
     border-radius: 10px;
 }
 
-.share-container{
+.share-container {
     padding: 20px;
 }
 
@@ -61,4 +61,3 @@
 .color-picker {
     grid-area: h;
 }
-
