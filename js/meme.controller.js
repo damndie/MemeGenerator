@@ -51,7 +51,7 @@ function checkClick(ev) {
 }
 
 function onMove(ev) {
-    const meme = getMeme()
+    const meme = onGetMeme()
     const isDrag = meme.lines[meme.selectedLineIdx].isDrag
     if (!isDrag) return
 
